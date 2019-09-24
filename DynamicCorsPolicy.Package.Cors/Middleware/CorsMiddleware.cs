@@ -30,7 +30,7 @@ namespace DynamicCorsPolicy.Package.Cors.Middleware
             if (origins?.Length > 0)
             {
                 var policyOrigins = policy.Origins;
-                var newOrigins = policyOrigins.Except(origins);
+                var newOrigins = origins.Except(policyOrigins);
                 foreach (var origin in newOrigins)
                     policy.Origins.Add(origin);
             }

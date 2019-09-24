@@ -13,14 +13,16 @@ namespace DynamicCorsPolicy.Package.Cors.Extensions
     {
         public static IServiceCollection AddCorsPolicy(
              this IServiceCollection services,
-             string apiUrl ,string corsPolicy)
+             string corsPolicy, string apiUrl)
         {
              
-            var allowedOriginsString =  CorsHelper.GetAllowedOrigins(apiUrl);
-            services.AddCors(x => x.AddPolicy(corsPolicy,
-                builder =>
-                    builder.WithOrigins(allowedOriginsString).AllowAnyHeader().AllowAnyMethod())); 
-          
+            var allowedOrigins  =  CorsHelper.GetAllowedOrigins(apiUrl);
+            if (allowedOrigins != null)
+            {
+                services.AddCors(x => x.AddPolicy(corsPolicy,
+                 builder =>
+                     builder.WithOrigins(allowedOrigins).AllowAnyHeader().AllowAnyMethod()));
+            }
             services.AddTransient<ICorsPolicyAccessor, CorsPolicyAccessor>();
 
             return services;

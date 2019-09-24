@@ -13,7 +13,7 @@ namespace DynamicCorsPolicy.Api
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            apiUrl = Configuration.GetSection("ConnectionStrings").Value;
+            apiUrl = Configuration.GetSection("ConfigServiceUrl").Value;
         }
 
         public IConfiguration Configuration { get; }
@@ -24,7 +24,7 @@ namespace DynamicCorsPolicy.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddCorsPolicy(corsPolicyName, apiUrl);
+            services.AddCorsPolicy(corsPolicyName , apiUrl);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,7 +36,7 @@ namespace DynamicCorsPolicy.Api
             }
 
             app.UseHttpsRedirection();
-            app.UseCorsPolicy(corsPolicyName, apiUrl);
+            app.UseCorsPolicy(corsPolicyName,apiUrl);
             app.UseRouting();
             app.UseAuthorization();
 

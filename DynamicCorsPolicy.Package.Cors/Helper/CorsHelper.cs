@@ -6,17 +6,22 @@ namespace DynamicCorsPolicy.Package.Cors.Helper
     public class CorsHelper
     {
         public static string[]  GetAllowedOrigins(string configUrl)
-        { 
+        {
+            try
+            {
 
-            var appSettingsUrl = configUrl.EndsWith("/")
-                ? $"{configUrl}api/allowedOrigins"
-                : $"{configUrl}/api/allowedOrigins";
+                var appSettingsUrl = configUrl.EndsWith("/")
+                    ? $"{configUrl}allowedorigins"
+                    : $"{configUrl}/allowedorigins";
 
-            
-            var allowedOriginsString1 = new WebAPIHelper<string>(appSettingsUrl).Get(); 
 
-            return allowedOriginsString1;
-        }
+                var allowedOrigins = new WebAPIHelper<string>(appSettingsUrl).Get();
+
+                return allowedOrigins;
+            }
+            catch (Exception exp)
+            { return null; }
+    }
        
     }
 }

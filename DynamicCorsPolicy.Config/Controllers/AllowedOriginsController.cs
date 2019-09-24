@@ -10,7 +10,7 @@ using DynamicCorsPolicy.Config.Models;
 
 namespace DynamicCorsPolicy.Config.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class AllowedOriginsController : ControllerBase
     {
@@ -23,9 +23,9 @@ namespace DynamicCorsPolicy.Config.Controllers
 
         // GET: api/AllowedOrigins
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<AllowedOrigins>>> GetAllowedOrigins()
+        public async Task<ActionResult<IEnumerable<string>>> GetAllowedOrigins()
         {
-            return await _context.AllowedOrigins.Where(o=>o.Enabled).ToListAsync();
+            return await _context.AllowedOrigins.Where(o=>o.Enabled).Select(s=>s.URL).ToListAsync();
         }
 
         // GET: api/AllowedOrigins/5
