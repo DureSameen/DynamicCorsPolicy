@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{508E4E82-B443-49EC-842A-B3C47F313CF6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConfigurationService", "ConfigurationService", "{64F21F80-B2E7-4D8C-98F4-CDC799B98135}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicCorsPolicy.Package.Cors", "DynamicCorsPolicy.Package.Cors\DynamicCorsPolicy.Package.Cors.csproj", "{259748BA-693C-4753-B2F4-DF1A16EA9370}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Package", "Package", "{687C4515-1EF9-4B0F-8AD8-1D758B42DACA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicCorsPolicy.Api", "DynamicCorsPolicy.Api\DynamicCorsPolicy.Api.csproj", "{AEA33E19-12A5-4C63-8C8C-A25CDF50DDA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicCorsPolicy.Config", "DynamicCorsPolicy.Config\DynamicCorsPolicy.Config.csproj", "{E69C3298-476B-4F86-B034-6F2957CDD686}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{259748BA-693C-4753-B2F4-DF1A16EA9370}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{259748BA-693C-4753-B2F4-DF1A16EA9370}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{259748BA-693C-4753-B2F4-DF1A16EA9370}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{259748BA-693C-4753-B2F4-DF1A16EA9370}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEA33E19-12A5-4C63-8C8C-A25CDF50DDA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEA33E19-12A5-4C63-8C8C-A25CDF50DDA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEA33E19-12A5-4C63-8C8C-A25CDF50DDA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEA33E19-12A5-4C63-8C8C-A25CDF50DDA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E69C3298-476B-4F86-B034-6F2957CDD686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E69C3298-476B-4F86-B034-6F2957CDD686}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E69C3298-476B-4F86-B034-6F2957CDD686}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E69C3298-476B-4F86-B034-6F2957CDD686}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{259748BA-693C-4753-B2F4-DF1A16EA9370} = {687C4515-1EF9-4B0F-8AD8-1D758B42DACA}
+		{AEA33E19-12A5-4C63-8C8C-A25CDF50DDA9} = {508E4E82-B443-49EC-842A-B3C47F313CF6}
+		{E69C3298-476B-4F86-B034-6F2957CDD686} = {64F21F80-B2E7-4D8C-98F4-CDC799B98135}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D8B4A0C4-FF5E-47E6-AC00-73F96862E5D7}
+	EndGlobalSection
+EndGlobal
