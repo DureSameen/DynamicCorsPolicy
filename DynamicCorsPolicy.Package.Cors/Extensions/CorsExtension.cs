@@ -29,7 +29,8 @@ namespace DynamicCorsPolicy.Package.Cors.Extensions
         }
 
 
-        public static IApplicationBuilder UseCorsPolicy(this IApplicationBuilder app, string corsPolicy, string apiUrl)
+        public static IApplicationBuilder UseCorsPolicy(this IApplicationBuilder app, string corsPolicy,
+            string apiUrl)
         {
             app.UseCorsUpdate(corsPolicy, apiUrl);
             app.UseCors(corsPolicy);

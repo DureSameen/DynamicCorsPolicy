@@ -20,7 +20,7 @@ namespace DynamicCorsPolicy.Config.Models
         {
 
             modelBuilder.Entity<AllowedOrigins>().HasData(new AllowedOrigins() { Id = 1, Enabled = true, Name = "client1", URL = "https://localhost:44300/" });
-            modelBuilder.Entity<AllowedOrigins>().HasData(new AllowedOrigins() { Id = 2, Enabled = false, Name = "client2", URL = "http://localhost:48151" });
+            modelBuilder.Entity<AllowedOrigins>().HasData(new AllowedOrigins() { Id = 2, Enabled = false, Name = "client2", URL = "http://localhost:58157" });
             modelBuilder.Entity<AllowedOrigins>().HasData(new AllowedOrigins() { Id = 3, Enabled = true, Name = "client3", URL = "http://localhost:38151" });
 
         }

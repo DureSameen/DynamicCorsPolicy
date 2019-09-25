@@ -34,12 +34,10 @@ namespace DynamicCorsPolicy.Api
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseHttpsRedirection();
             app.UseCorsPolicy(corsPolicyName,apiUrl);
             app.UseRouting();
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
